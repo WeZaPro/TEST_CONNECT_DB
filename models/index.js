@@ -1,3 +1,4 @@
+require("dotenv").config(); // ✅ โหลด .env อีกครั้งที่นี่
 const Sequelize = require("sequelize");
 
 // const sequelize = new Sequelize(
@@ -17,8 +18,8 @@ const Sequelize = require("sequelize");
 
 const sequelize = new Sequelize(
   process.env.DB_NAME,
-  "happy_Demo",
-  "Taweesak5050",
+  process.env.DB_USER,
+  process.env.DB_PASSWORD,
   {
     host: "localhost",
     dialect: "mysql",
