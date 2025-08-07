@@ -10,14 +10,14 @@ const db = require("./models");
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // ✅ เปิด CORS ให้ทุก origin
-// app.use(cors());
+app.use(cors());
 
-app.use(
-  cors({
-    origin: ["https://your-frontend-domain.com"], // หรือหลาย domain ได้
-    methods: ["GET", "POST", "PUT", "DELETE"],
-  })
-);
+// app.use(
+//   cors({
+//     origin: ["https://your-frontend-domain.com"], // หรือหลาย domain ได้
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//   })
+// );
 
 app.use(express.json());
 
