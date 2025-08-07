@@ -33,7 +33,7 @@ app.use("/api/taxiDriver", taxiDriverRoutes);
 // Root API
 app.get("/", (req, res) => {
   res.send(
-    `🚀 API is running successfully!: db DB_USER ${process.env.DB_USER} : db DB_PASSWORD ${process.env.DB_PASSWORD}`
+    `🚀 API is running successfully!: db DB_USER ${process.env.DB_USER} : db DB_NAME ${process.env.DB_NAME} : db DB_PASSWORD ${process.env.DB_PASSWORD}`
   );
 });
 
