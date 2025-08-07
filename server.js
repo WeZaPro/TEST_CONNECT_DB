@@ -32,13 +32,13 @@ app.use("/api/taxiDriver", taxiDriverRoutes);
 
 // Root API
 app.get("/", (req, res) => {
-  res.send(`🚀 API is running successfully! db name ${process.env.DB_NAME}`);
+  res.send(
+    `🚀 API is running successfully!: db DB_USER ${process.env.DB_USER} : db DB_PASSWORD ${process.env.DB_PASSWORD}`
+  );
 });
 
 // start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(
-    `🚀 Server is running on port ${PORT} : db name ${process.env.DB_NAME} : db DB_USER ${process.env.DB_USER} : db DB_PASSWORD --`
-  );
+  console.log(`🚀 Server is running on port ${PORT}`);
 });
