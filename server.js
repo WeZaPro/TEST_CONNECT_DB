@@ -34,6 +34,6 @@ app.use("/api/taxiDriver", taxiDriverRoutes);
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(
-    `🚀 Server is running on port ${PORT} : db name ${process.env.DB_NAME}`
+    `🚀 Server is running on port ${PORT} : db name ${process.env.DB_NAME} : db DB_USER ${process.env.DB_USER} : db DB_PASSWORD ${process.env.DB_PASSWORD}`
   );
 });
