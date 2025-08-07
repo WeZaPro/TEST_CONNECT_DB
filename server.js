@@ -30,6 +30,11 @@ db.sequelize.sync().then(() => {
 const taxiDriverRoutes = require("./routes/taxiDriver.routes");
 app.use("/api/taxiDriver", taxiDriverRoutes);
 
+// Root API
+app.get("/", (req, res) => {
+  res.send(`🚀 API is running successfully! db name ${process.env.DB_NAME}`);
+});
+
 // start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
